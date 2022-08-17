@@ -1,0 +1,22 @@
+name: "Boxein"
+title: "Boxein"
+description: |
+  Boxein
+output_dir: "_site"
+navbar:
+  right:
+    - text: "Presentació"
+      href: index.html
+    - text: Publicacions
+      menu: 
+        - text: "Articles"
+          href: articles.html
+        - text: "Policy briefs"
+          href: policybriefs.html
+    - text: "Projectes"
+      href: projectes.html
+    - text: "Serveis"
+      href: serveis.html
+    - text: "Contacte"
+      href: contacte.html
+output: distill::distill_article
