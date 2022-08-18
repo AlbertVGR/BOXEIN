@@ -18,6 +18,8 @@ navbar:
           href: articles.html
         - text: "Policy briefs"
           href: policybriefs.html
+        - text: "Entrevistes"
+          href: entrevistes.html
     - text: "Projectes"
       href: projectes.html
     - text: "Blog"
