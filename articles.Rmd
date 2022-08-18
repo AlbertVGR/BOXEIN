@@ -1,5 +1,6 @@
 ---
 title: "Articles"
+listing: articles
 output: distill::distill_article
 ---
 

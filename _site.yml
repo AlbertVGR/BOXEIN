@@ -1,5 +1,7 @@
 name: "Boxein"
 title: "Boxein"
+#google_analytics: "" # this implies GDPR and cookie consent
+theme: "Albert_theme.css"
 description: |
   Boxein
 output_dir: "_site"
@@ -15,8 +17,10 @@ navbar:
           href: policybriefs.html
     - text: "Projectes"
       href: projectes.html
-    - text: "Serveis"
-      href: serveis.html
+    - text: "Blog"
+      href: blog.html
     - text: "Contacte"
       href: contacte.html
 output: distill::distill_article
+
+

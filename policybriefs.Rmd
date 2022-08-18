@@ -1,5 +1,6 @@
 ---
 title: "Policy briefs"
+listing: policybriefs
 output: distill::distill_article
 ---
 

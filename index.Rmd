@@ -1,17 +1,13 @@
 ---
-title: "Boxein"
+title: "Sobre Boxein"
 description: |
-  Welcome to the website. I hope you enjoy it!
 site: distill::distill_website
 ---
-Hola Albert
-
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
-
 ```
+
+Boxein és un projecte per fer anàlisi de dades amb les dades obertes de les administracions públiques de Catalunya. 
+
+
 
