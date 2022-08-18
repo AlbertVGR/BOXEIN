@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "path": "entrevistes/",
+    "title": "Untitled",
+    "description": "A new article created using the Distill format.",
+    "author": [
+      {
+        "name": "Nora Jones",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2022-08-18",
+    "categories": [],
+    "contents": "\r\nDistill is a publication format for scientific and technical writing,\r\nnative to the web.\r\nLearn more about using Distill for R Markdown at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-08-18T23:36:12+02:00",
+    "input_file": "test_entrevistes.knit.md"
+  }
+]
