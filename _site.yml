@@ -6,6 +6,9 @@ description: |
   Boxein
 output_dir: "_site"
 navbar:
+  logo:
+    image: images/blue_circle.PNG
+  search: true
   right:
     - text: "Presentació"
       href: index.html
