@@ -1,0 +1,54 @@
+---
+title: "Applicacions - Projectes"
+output: distill::distill_article
+---
+```{css, echo=FALSE}
+h1 {
+  text-align: center;
+}
+```
+
+## Galeria dels projectes
+
+```{r}
+#següint lisa lendway per fer quadricula per columnes i els cheatshets d'R Markdown
+#Cada imatge representarà un projecte fet amb shiny (captura de pantalla del projecte)
+```
+
+
+
+:::: {style="display: flex;"}
+
+::: {}
+
+ | 
+------------- | 
+<center>
+![Font: Elaboració pròpia amb dades del Consell Comarcal del Vallès Oriental i de l’ICGC](images/pexels-木木-4031126.jpg){width=90%} </center>  
+
+ | 
+------------- | 
+<center>
+![Font: Elaboració pròpia amb dades de l’INE i de l’ICGC](images/pexels-木木-4031126.jpg){width=90%} </center>  
+
+
+:::
+
+::: {}
+
+
+ | 
+------------- |
+<center>
+![Font: Elaboració pròpia amb dades de l’INE, del Consell Comarcal del Vallès Oriental i l’ICGC](images/pexels-木木-4031126.jpg){width=90%} </center>  
+
+
+ | 
+------------- | 
+<center>
+![Font: Elaboració pròpia amb dades de l’IDESCAT i l’ICGC](images/pexels-木木-4031126.jpg){width=90%} </center>  
+
+:::
+
+::::
+

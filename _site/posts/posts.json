@@ -1,5 +1,42 @@
 [
   {
+    "path": "posts/2022-08-19-testpost2/",
+    "title": "test_post_2",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Unknown",
+        "url": {}
+      }
+    ],
+    "date": "2022-08-19",
+    "categories": [],
+    "contents": "\r\nDistill is a publication format for scientific and technical writing,\r\nnative to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-08-19T20:36:26+02:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2022-08-19-testpostblog/",
+    "title": "test_post_blog",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Unknown",
+        "url": {}
+      }
+    ],
+    "date": "2022-08-19",
+    "categories": [
+      "portfolios",
+      "dygraphs"
+    ],
+    "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-09-17T00:21:29+02:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2022-08-18-test/",
     "title": "test",
     "description": "A short description of the post.",

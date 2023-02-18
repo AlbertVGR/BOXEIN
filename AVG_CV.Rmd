@@ -1,0 +1,50 @@
+---
+title: "Albert Valls Garcia"
+#image: "images/AVG.jpg"
+#links:
+#  - label: '<i class="fab fa-linkedin"></i> LinkedIn'
+#    url: "https://www.linkedin.com/in/albert-valls-garcia-2118b1100/"
+#  - label: '<i class="fab fa-twitter"></i> Twitter'
+#    url: "https://twitter.com/AlbertVallsG1"
+#  - label: '<i class="fab fa-github"></i> GitHub'
+#    url: "https://github.com/AlbertVGR"
+#  - label: '<i class="fas fa-envelope"></i> Email'
+#    url: "mailto:albert.vallsg@gmail.com"
+output: distill::distill_article
+#output:
+#  postcards::jolla
+#site: distill::distill_website
+---
+
+```{css, echo=FALSE}
+h1 {
+  text-align: center;
+}
+```
+
+
+```{r, echo=FALSE}
+#postcards::create_postcard(file = "index.Rmd", template = "jolla")
+```
+ 
+<center>
+![](images/AVG_round.png){width=50%}
+
+Col·legiat al [COLPIS](https://www.colpis.cat/): Número 3350
+
+[<i class="fab fa-twitter"></i> Twitter](https://twitter.com/AlbertVallsG1) - [<i class="fab fa-linkedin"></i> LinkedIn]("https://www.linkedin.com/in/albert-valls-garcia-2118b1100/") - [<i class="fa fa-github"></i> GitHub](https://github.com/AlbertVGR) - [<i class="fas fa-envelope"></i> Email](mailto:albert.vallsg@gmail.com) 
+
+</center>
+
+<center>
+### Idiomes
+Català - Castellà - Anglès
+</center>
+
+## Descripció
+
+És consultor de gestió pública a Portacabot i professor associat al Departament de Ciència Política i de Dret Públic de la Universitat Autònoma de Barcelona (UAB). Graduat en Ciències Polítiques i Gestió Pública per la UAB i màster de Relacions Internacionals, Seguretat i Desenvolupament (MURISD) per la UAB. També ha obtingut el títol d’expert d’Analista de dades per a l'anàlisi política i la gestió pública de la Universitat de Barcelona (UB). Aficionat al llenguatge de programació en R i a l’anàlisi de dades. Experiència com a analista de dades del sector públic al Consell Comarcal del Vallès Oriental, en consultoria d’afers públics a KREAB i pràctiques a la Fundació Catalunya Europa i a la Delegació del Govern de la Generalitat davant la Unió Europea. 
+
+## Motivació
+
+Per tal de millorar el procés de presa de decisions i millorar el benestar global, m'agrada donar arguments, justificacions i respostes a qüestions polítiques rellevants a través de fer recerca amb mètodes qualitatius o quantitatius.

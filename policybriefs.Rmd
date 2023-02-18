@@ -4,6 +4,11 @@ listing: policybriefs
 output: distill::distill_article
 ---
 
+```{css, echo=FALSE}
+h1 {
+  text-align: center;
+}
+```
 
 
 

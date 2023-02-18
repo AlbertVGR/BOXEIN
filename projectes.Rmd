@@ -1,9 +1,0 @@
----
-title: "Projectes"
-listing: articles
-output: distill::distill_article
----
-
-
-
-

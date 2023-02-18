@@ -1,13 +1,168 @@
 ---
-title: "Sobre Boxein"
-description: |
+title: "Què és Boxein?"
+#description: |
 site: distill::distill_website
 ---
+```{css, echo=FALSE}
+h1 {
+  text-align: center;
+}
+```
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Boxein és un projecte per fer anàlisi de dades amb les dades obertes de les administracions públiques de Catalunya. 
+```{r}
+#<iframe width="600" height="400" src="https://www.youtube.com/embed/6A5EpqqDOdk" #frameborder="0" allowfullscreen></iframe>
+
+# Afegir un video de youtube
+
+# https://youtubeembedcode.com/es/
+```
+
+<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="788.54" height="443" type="text/html" src="https://www.youtube.com/embed/5IcUv7IORcg?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"><div><small><a href="https://youtubeembedcode.com/de/">youtubeembedcode de</a></small></div><div><small><a href="https://oddssidorutansvensklicens.se/">odds sidor utan svensk licens</a></small></div></iframe> 
+
+Boxein és un mitjà de comunicació que empra tècniques computacionals per divulgar coneixement sobre les ciències socials a Catalunya. Amb les eines disponibles al segle XXI, aquest mitjà de comunicació vol ser transversal entre la teoria i la pràctica i així, revolucionar la manera de difondre informació sobre la realitat política, social i econòmica a Catalunya. Per portar a terme aquesta vocació, l'entitat generarà les seves pròpies dades amb tècniques documentables i farà servir qualsevol font de dades obertes disponible o facilitada per terceres persones o institucions.
+
+La naturalesa de les publicacions en aquest mitjà es correspon en voler entendre i explicar els fenòmens socials que tenen lloc a la realitat social. A través d'aquest procés es vol oferir el desenvolupament d'eines o aplicacions per millorar la vida dels habitants d'aquesta regió del planeta terra.
+
+L'ànima de BOXEIN és fonamentalment cooperativa i els seus projectes són reproduïbles per a qualsevol persona amb accés a un ordinador personal i internet.
+
+```{r panelset, echo=FALSE}
+library(xaringanExtra)
+use_panelset()
+style_panelset_tabs(active_foreground = "#003049", hover_foreground = "#003049")
+```
+
+::::: {.panelset}
+
+::: {.panel}
+
+## A qui va dirigit?
+
+- A la població de Catalunya en general.
+
+- A persones interessades en les ciències socials i la comunicació.
+
+  - Politòlogues i politòlegs, sociòlogues i sociòlegs.
+  - Periodistes.
+  - Economistes.
+  
+- Funcionaris de l'administració pública de Catalunya.
+
+  - Generalitat de Catalunya.
+  - Diputacions provincials.
+  - Consells Comarcals.
+  - Ajuntaments  
+  
+- Estudiants de ciències socials que vulguin col·laborar en projectes o publicar els seus projectes (TFGs, TFMs, Phd, articles, entrevistes) d'acord amb les normes de publicació de l'entitat.
+
+:::
+
+::: {.panel}
+
+## Objectius
+
+- Augmentar l'interès pel coneixement científic social de la població de Catalunya a travès de la divulgació i el codi obert.  
+- Obrir la generació i interpretació del coneixement científic social als habitants de Catalunya. 
+- Construir un ecosistema d'anàlisi de dades fonamentat amb el llenguatge de programació en R per garantir la reproducció i comprensió de les anàlisis efectuades per part de qualsevol persona. 
+- Emprar la informació obtinguda per avaluar i proposar polítiques públiques. 
+
+:::
+
+::: {.panel}
+
+## Què oferim?
+
+- Estudis a mida.
+- Consultoria d'estratègia i operacions. 
+- Disseny de polítiques públiques. 
+- Avaluació de polítiques públiques. 
+- Desenvolupament d'aplicacions d'anàlisis política i socioeconòmica.
+- Informes d'anàlisi exploratòria de dades.
+
+:::
+
+::: {.panel}
+
+## Abast
+
+L'abast dels nostres projectes poden arribar als següents àmbits administratius, amb la consegüent dificultat afegida:
+
+- Municipal.
+- Comarcal.
+- Provincial.
+- Regional (comunitat autònoma de Catalunya)
+- L'estat Espanyol i els seus nivells adiministratius prèvis.
+- La Unió Europea.
+- El sistema internacional.
+
+:::
+
+::: {.panel}
+
+## Funcionament
+
+- Propostes de projectes per part de Boxein.
+  - Retransmissió de les fases del projecte a Discord (afegir enllaç).
+
+- Proposa un projecte!
+  - Ets un patró de Boxein amb més de tres mesos d'antiguitat? Aleshores tens el dret de suggerir-nos un projecte i participar-ne. Nosaltres et direm si el projecte que recomanes és factible i el podem fer o li cal un altre enfocament.
+
+### Tots els projectes seran publicats en aquest web i el codi serà de lliure accés mitjançant Github. Aquesta condició no es complirà per a tots aquells projectes que siguin encàrrecs privats i que ho sol·licitin.
+
+:::
+
+:::::
+
+## Projectes en ejecució
+
+```{r}
+library(DT)
+datatable(head(mtcars, n = nrow(mtcars)), options = list(pageLength = 5))
+```
+
+
+
+
+
+
+:::: {style="display: flex;"}
+
+::: {}
+
+Pots treure els headers | 
+------------- | 
+<center>
+![The patio Chris and I built summer 2020.](images/European_Parliament_-_Hemicycle.jpg){width=50%} 
+</center>| 
+
+Pots treure els headers | 
+------------- | 
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. | 
+
+
+:::
+
+::: {}
+
+
+Pots treure els headers | 
+------------- |
+<center>
+![The patio Chris and I built summer 2020.](images/European_Parliament_-_Hemicycle.jpg){width=50%}
+</center>| 
+
+
+Pots treure els headers | 
+------------- | 
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. | 
+
+:::
+
+::::
+
 
 
 

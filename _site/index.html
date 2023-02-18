@@ -88,26 +88,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Boxein: Sobre Boxein</title>
+  <title>BOXEIN: Què és Boxein?</title>
 
 
+  <link rel="icon" type="image/png" href="images/Golden_O_transp.png"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Boxein: Sobre Boxein"/>
+  <meta property="og:title" content="BOXEIN: Què és Boxein?"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Boxein"/>
+  <meta property="og:site_name" content="BOXEIN"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Boxein: Sobre Boxein"/>
+  <meta property="twitter:title" content="BOXEIN: Què és Boxein?"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["Sobre Boxein"]},{"type":"NULL"},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site"]}},"value":[{"type":"character","attributes":{},"value":["Què és Boxein?"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -785,6 +786,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -1857,15 +1859,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-          var fn = $(this).children()[0]
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
           $(this).html(fn.shadowRoot.querySelector("sup"))
           $(this).id = fn.id
           fn.remove()
         }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -2154,34 +2162,36 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /* Optional: embed custom fonts here with `@import`          */
   /* This must remain at the top of this file.                 */
 
-
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
 
   html {
     /*-- Main font sizes --*/
     --title-size:      50px;
-    --body-size:       1.06rem;
+    --body-size:       18px;
     --code-size:       14px;
     --aside-size:      12px;
     --fig-cap-size:    13px;
     /*-- Main font colors --*/
-    --title-color:     #000000;
-    --header-color:    rgba(0, 0, 0, 0.8);
-    --body-color:      rgba(0, 0, 0, 0.8);
-    --aside-color:     rgba(0, 0, 0, 0.6);
-    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    --title-color:     #003049;
+    --header-color:    #003049;
+    --body-color:      #000000;
+    --aside-color:     #000000;
+    --fig-cap-color:   #000000;
     /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    sans-serif;
+    --heading-font:    Montserrat;
     --mono-font:       monospace;
-    --body-font:       sans-serif;
-    --navbar-font:     sans-serif;  /* websites + blogs only */
+    --body-font:       Montserrat;
+    --navbar-font:     Montserrat;  /* websites + blogs only */
   }
 
   /*-- ARTICLE METADATA --*/
   d-byline {
     --heading-size:    0.6rem;
-    --heading-color:   rgba(0, 0, 0, 0.5);
+    --heading-color:   #003049;
     --body-size:       0.8rem;
-    --body-color:      rgba(0, 0, 0, 0.8);
+    --body-color:      #000000;
   }
 
   /*-- ARTICLE TABLE OF CONTENTS --*/
@@ -2202,22 +2212,45 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /* These properties only apply to Distill sites and blogs  */
 
   .distill-site-header {
-    --title-size:       18px;
-    --text-color:       rgba(255, 255, 255, 0.8);
-    --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
+    --title-size:       25px;
+    --text-color:       white;
+    --text-size:        20px;
+    --hover-color:      #FFD700;
+    --bkgd-color:       #003049;
   }
 
   .distill-site-footer {
-    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-color:       white;
     --text-size:        15px;
-    --hover-color:      white;
-    --bkgd-color:       #0F2E3D;
+    --hover-color:      #FFD700;
+    --bkgd-color:       #003049;
   }
 
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
+
+
+  d-byline {
+      contain: content;
+      overflow: hidden;
+      border-top: 1px solid #003049;
+      font-size: 0.8rem;
+      line-height: 1.8em;
+      padding: 1.5rem 0;
+      min-height: 1.8em;
+  }
+
+  d-article {
+      contain: layout style;
+      overflow-x: hidden;
+      border-top: 1px solid #003049;
+      padding-top: 2rem;
+      color: #000000;
+  }
+
+  d-title {
+      padding-top: 6rem;
+  }
 
 
   .distill-site-footer {
@@ -2229,7 +2262,119 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }
 
   body {
-    background-color: #F8EFBA;
+    background-color: #efe8db;
+  }
+
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #003049;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-dropdown-active {
+    display: block;
+  }
+
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: white;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+
+  .nav-dropdown-content a:hover {
+    background-color: #003049;
+    color: black;
+  }
+
+  .algolia-autocomplete {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: sub;
+    transform: translateY(-25%);
+    background-color: white;
+    color: black;
+    padding: 6px;
+    padding-top: 8px;
+    padding-bottom: 0;
+    border-radius: 6px;
+    border: 1px #0F2E3D solid;
+    width: 180px;
+    }
+
+  .nav-search {
+    font-size: medium;
+  }
+
+  .distill-site-header .logo img {
+    max-height: 40px;
+    width: auto;
+    margin-top: 10px;
+  }
+
+  .distill-site-header .title {
+    position: static;
+    transform: translateY(-15%);
+  }
+
+  .distill-site-header .nav-right{
+    position: static;
+    top: 25%;
+  }
+
+  .nav-search {
+    position: static;
+    transform: translateY(0%);
   }</style>
   <style type="text/css">
   /* base style */
@@ -2386,7 +2531,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+  <link href="site_libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+  <script src="site_libs/panelset-0.2.6/panelset.js"></script>
+  <script src="site_libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
+  <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+  <script src="site_libs/datatables-binding-0.27/datatables.js"></script>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link href="site_libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet" />
+  <script src="site_libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
+  <link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+  <script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2406,7 +2562,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Sobre Boxein","authors":[]}
+{"title":"Què és Boxein?","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2414,14 +2570,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a class="logo">
-<img src="images/blue_circle.PNG" alt="Logo"/>
+<a class="logo" href="index.html">
+<img src="images/Golden_O_transp.png" alt="Logo"/>
 </a>
-<a href="index.html" class="title">Boxein</a>
+<a href="index.html" class="title">BOXEIN</a>
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
-<a href="index.html">Presentació</a>
 <div class="nav-dropdown">
 <button class="nav-dropbtn">
 Publicacions
@@ -2434,9 +2589,23 @@ Publicacions
 <a href="entrevistes.html">Entrevistes</a>
 </div>
 </div>
-<a href="projectes.html">Projectes</a>
 <a href="blog.html">Blog</a>
-<a href="contacte.html">Contacte</a>
+<a href="aplicacions.html">Aplicacions</a>
+<a href="https://twitter.com/Boxein_365">
+<i class="fa fa-twitter" aria-hidden="true"></i>
+</a>
+<a href="https://github.com/AlbertVGR">
+<i class="fa fa-github" aria-hidden="true"></i>
+</a>
+<a href="https://www.linkedin.com/company/68530485/">
+<i class="fa fa-linkedin" aria-hidden="true"></i>
+</a>
+<a href="https://www.youtube.com/channel/UCi9m8TJj3hVekabREibVRaQ">
+<i class="fa fa-youtube-square" aria-hidden="true"></i>
+</a>
+<a href="mailto:info.boxein@gmail.com">
+<i class="fa fa-envelope" aria-hidden="true"></i>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2446,7 +2615,7 @@ Publicacions
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Sobre Boxein</h1>
+<h1>Què és Boxein?</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2454,10 +2623,174 @@ Publicacions
 
 
 <div class="d-article">
-<p>Boxein és un projecte per fer anàlisi de dades amb les dades obertes
-de les administracions públiques de Catalunya.</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+<style type="text/css">
+h1 {
+  text-align: center;
+}
+</style>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="788.54" height="443" type="text/html" src="https://www.youtube.com/embed/5IcUv7IORcg?autoplay=0&amp;fs=0&amp;iv_load_policy=3&amp;showinfo=0&amp;rel=0&amp;cc_load_policy=0&amp;start=0&amp;end=0&amp;origin=https://youtubeembedcode.com">
+<div>
+<small><a href="https://youtubeembedcode.com/de/">youtubeembedcode de</a></small>
+</div>
+<div>
+<small><a href="https://oddssidorutansvensklicens.se/">odds sidor utan svensk licens</a></small>
+</div>
+</iframe>
+<p>Boxein és un mitjà de comunicació que empra tècniques computacionals per divulgar coneixement sobre les ciències socials a Catalunya. Amb les eines disponibles al segle XXI, aquest mitjà de comunicació vol ser transversal entre la teoria i la pràctica i així, revolucionar la manera de difondre informació sobre la realitat política, social i econòmica a Catalunya. Per portar a terme aquesta vocació, l’entitat generarà les seves pròpies dades amb tècniques documentables i farà servir qualsevol font de dades obertes disponible o facilitada per terceres persones o institucions.</p>
+<p>La naturalesa de les publicacions en aquest mitjà es correspon en voler entendre i explicar els fenòmens socials que tenen lloc a la realitat social. A través d’aquest procés es vol oferir el desenvolupament d’eines o aplicacions per millorar la vida dels habitants d’aquesta regió del planeta terra.</p>
+<p>L’ànima de BOXEIN és fonamentalment cooperativa i els seus projectes són reproduïbles per a qualsevol persona amb accés a un ordinador personal i internet.</p>
+<div class="layout-chunk" data-layout="l-body">
+<style>.panelset{--panel-tab-active-foreground: #003049;--panel-tab-hover-foreground: #003049;}</style>
+</div>
+<div class="panelset">
+<section id="a-qui-va-dirigit" class="panel">
+<h2>A qui va dirigit?</h2>
+<ul>
+<li><p>A la població de Catalunya en general.</p></li>
+<li><p>A persones interessades en les ciències socials i la comunicació.</p>
+<ul>
+<li>Politòlogues i politòlegs, sociòlogues i sociòlegs.</li>
+<li>Periodistes.</li>
+<li>Economistes.</li>
+</ul></li>
+<li><p>Funcionaris de l’administració pública de Catalunya.</p>
+<ul>
+<li>Generalitat de Catalunya.</li>
+<li>Diputacions provincials.</li>
+<li>Consells Comarcals.</li>
+<li>Ajuntaments</li>
+</ul></li>
+<li><p>Estudiants de ciències socials que vulguin col·laborar en projectes o publicar els seus projectes (TFGs, TFMs, Phd, articles, entrevistes) d’acord amb les normes de publicació de l’entitat.</p></li>
+</ul>
+</section>
+<section id="objectius" class="panel">
+<h2>Objectius</h2>
+<ul>
+<li>Augmentar l’interès pel coneixement científic social de la població de Catalunya a travès de la divulgació i el codi obert.<br />
+</li>
+<li>Obrir la generació i interpretació del coneixement científic social als habitants de Catalunya.</li>
+<li>Construir un ecosistema d’anàlisi de dades fonamentat amb el llenguatge de programació en R per garantir la reproducció i comprensió de les anàlisis efectuades per part de qualsevol persona.</li>
+<li>Emprar la informació obtinguda per avaluar i proposar polítiques públiques.</li>
+</ul>
+</section>
+<section id="què-oferim" class="panel">
+<h2>Què oferim?</h2>
+<ul>
+<li>Estudis a mida.</li>
+<li>Consultoria d’estratègia i operacions.</li>
+<li>Disseny de polítiques públiques.</li>
+<li>Avaluació de polítiques públiques.</li>
+<li>Desenvolupament d’aplicacions d’anàlisis política i socioeconòmica.</li>
+<li>Informes d’anàlisi exploratòria de dades.</li>
+</ul>
+</section>
+<section id="abast" class="panel">
+<h2>Abast</h2>
+<p>L’abast dels nostres projectes poden arribar als següents àmbits administratius, amb la consegüent dificultat afegida:</p>
+<ul>
+<li>Municipal.</li>
+<li>Comarcal.</li>
+<li>Provincial.</li>
+<li>Regional (comunitat autònoma de Catalunya)</li>
+<li>L’estat Espanyol i els seus nivells adiministratius prèvis.</li>
+<li>La Unió Europea.</li>
+<li>El sistema internacional.</li>
+</ul>
+</section>
+<section id="funcionament" class="panel">
+<h2>Funcionament</h2>
+<ul>
+<li>Propostes de projectes per part de Boxein.
+<ul>
+<li>Retransmissió de les fases del projecte a Discord (afegir enllaç).</li>
+</ul></li>
+<li>Proposa un projecte!
+<ul>
+<li>Ets un patró de Boxein amb més de tres mesos d’antiguitat? Aleshores tens el dret de suggerir-nos un projecte i participar-ne. Nosaltres et direm si el projecte que recomanes és factible i el podem fer o li cal un altre enfocament.</li>
+</ul></li>
+</ul>
+<h3 id="tots-els-projectes-seran-publicats-en-aquest-web-i-el-codi-serà-de-lliure-accés-mitjançant-github.-aquesta-condició-no-es-complirà-per-a-tots-aquells-projectes-que-siguin-encàrrecs-privats-i-que-ho-sollicitin.">Tots els projectes seran publicats en aquest web i el codi serà de lliure accés mitjançant Github. Aquesta condició no es complirà per a tots aquells projectes que siguin encàrrecs privats i que ho sol·licitin.</h3>
+</section>
+</div>
+<h2 id="projectes-en-ejecució">Projectes en ejecució</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-0d752c6d969f0fb74df2" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0d752c6d969f0fb74df2">{"x":{"filter":"none","vertical":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280","Merc 280C","Merc 450SE","Merc 450SL","Merc 450SLC","Cadillac Fleetwood","Lincoln Continental","Chrysler Imperial","Fiat 128","Honda Civic","Toyota Corolla","Toyota Corona","Dodge Challenger","AMC Javelin","Camaro Z28","Pontiac Firebird","Fiat X1-9","Porsche 914-2","Lotus Europa","Ford Pantera L","Ferrari Dino","Maserati Bora","Volvo 142E"],[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2,17.8,16.4,17.3,15.2,10.4,10.4,14.7,32.4,30.4,33.9,21.5,15.5,15.2,13.3,19.2,27.3,26,30.4,15.8,19.7,15,21.4],[6,6,4,6,8,6,8,4,4,6,6,8,8,8,8,8,8,4,4,4,4,8,8,8,8,4,4,4,8,6,8,4],[160,160,108,258,360,225,360,146.7,140.8,167.6,167.6,275.8,275.8,275.8,472,460,440,78.7,75.7,71.1,120.1,318,304,350,400,79,120.3,95.1,351,145,301,121],[110,110,93,110,175,105,245,62,95,123,123,180,180,180,205,215,230,66,52,65,97,150,150,245,175,66,91,113,264,175,335,109],[3.9,3.9,3.85,3.08,3.15,2.76,3.21,3.69,3.92,3.92,3.92,3.07,3.07,3.07,2.93,3,3.23,4.08,4.93,4.22,3.7,2.76,3.15,3.73,3.08,4.08,4.43,3.77,4.22,3.62,3.54,4.11],[2.62,2.875,2.32,3.215,3.44,3.46,3.57,3.19,3.15,3.44,3.44,4.07,3.73,3.78,5.25,5.424,5.345,2.2,1.615,1.835,2.465,3.52,3.435,3.84,3.845,1.935,2.14,1.513,3.17,2.77,3.57,2.78],[16.46,17.02,18.61,19.44,17.02,20.22,15.84,20,22.9,18.3,18.9,17.4,17.6,18,17.98,17.82,17.42,19.47,18.52,19.9,20.01,16.87,17.3,15.41,17.05,18.9,16.7,16.9,14.5,15.5,14.6,18.6],[0,0,1,1,0,1,0,1,1,1,1,0,0,0,0,0,0,1,1,1,1,0,0,0,0,1,0,1,0,0,0,1],[1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1],[4,4,4,3,3,3,3,4,4,4,4,3,3,3,3,3,3,4,4,4,3,3,3,3,3,4,5,5,5,5,5,4],[4,4,1,1,2,1,4,2,2,4,4,3,3,3,4,4,4,1,2,1,1,2,2,4,2,1,2,2,4,6,8,2]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div style="display: flex;">
+<div>
+<table>
+<thead>
+<tr class="header">
+<th>Pots treure els headers</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<center>
+<figure>
+<img src="images/European_Parliament_-_Hemicycle.jpg" style="width:50.0%" alt="The patio Chris and I built summer 2020." />
+<figcaption aria-hidden="true">The patio Chris and I built summer 2020.</figcaption>
+</figure>
+</center>
+<div class="line-block"></div>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pots treure els headers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<thead>
+<tr class="header">
+<th>Pots treure els headers</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<center>
+<figure>
+<img src="images/European_Parliament_-_Hemicycle.jpg" style="width:50.0%" alt="The patio Chris and I built summer 2020." />
+<figcaption aria-hidden="true">The patio Chris and I built summer 2020.</figcaption>
+</figure>
+</center>
+<div class="line-block"></div>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pots treure els headers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2473,7 +2806,10 @@ class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"><
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <div class="distill-site-nav distill-site-footer">
-
+<p><a href="index.html">Boxein</a>, proposat per <a
+href="AVG_CV.html">Albert Valls Garcia</a> amb el paquet <a
+href="https://rstudio.github.io/distill/">distill</a> del llenguatge
+R.</p>
 </div>
 <!--/radix_placeholder_navigation_after_body-->
 

@@ -3,5 +3,10 @@ title: "Posts"
 listing: posts
 ---
 
+```{css, echo=FALSE}
+h1 {
+  text-align: center;
+}
+```
 
 

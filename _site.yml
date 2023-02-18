@@ -1,17 +1,19 @@
 name: "Boxein"
-title: "Boxein"
+title: "BOXEIN"
 #google_analytics: "" # this implies GDPR and cookie consent
-theme: "Albert_theme.css"
+theme: "test_theme.css"
 description: |
   Boxein
 output_dir: "_site"
+favicon: images/Golden_O_transp.png
 navbar:
-  logo:
-    image: images/blue_circle.PNG
   search: true
+  logo:
+    image: images/Golden_O_transp.png
+    href: index.html
   right:
-    - text: "Presentació"
-      href: index.html
+#    - text: "Presentació"
+#      href: index.html
     - text: Publicacions
       menu: 
         - text: "Articles"
@@ -20,12 +22,27 @@ navbar:
           href: policybriefs.html
         - text: "Entrevistes"
           href: entrevistes.html
-    - text: "Projectes"
-      href: projectes.html
     - text: "Blog"
       href: blog.html
-    - text: "Contacte"
-      href: contacte.html
+    - text: "Aplicacions"
+      href: aplicacions.html
+    - icon: fa fa-twitter
+      href: https://twitter.com/Boxein_365
+    - icon: fa fa-github
+      href: https://github.com/AlbertVGR
+    - icon: fa fa-linkedin
+      href: https://www.linkedin.com/company/68530485/
+    - icon: fa-youtube-square
+      href: https://www.youtube.com/channel/UCi9m8TJj3hVekabREibVRaQ
+#    - icon: fa fa-patreon
+#      href: https://www.patreon.com/boxein
+#    - icon: images/discord.png
+#      href: 
+    - icon: fa fa-envelope
+      href: mailto:info.boxein@gmail.com
 output: distill::distill_article
-
-
+#output: 
+#  distill::distill_article:
+#    toc: true
+#    toc_title: "Continguts"
+#    toc_float: true
