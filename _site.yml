@@ -1,7 +1,7 @@
 name: "Boxein"
 title: "BOXEIN"
 #google_analytics: "" # this implies GDPR and cookie consent
-theme: "test_theme.css"
+theme: "Boxein_theme.css"
 description: |
   Boxein
 output_dir: "_site"
