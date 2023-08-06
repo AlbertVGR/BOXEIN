@@ -1,5 +1,5 @@
 ---
-title: "Boxein"
+title: "La caixa d'èines"
 #description: |
 site: distill::distill_website
 ---
@@ -23,15 +23,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Presentació
 
-<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="788.54" height="443" type="text/html" src="https://www.youtube.com/embed/5IcUv7IORcg?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"><div><small><a href="https://youtubeembedcode.com/de/">youtubeembedcode de</a></small></div><div><small><a href="https://oddssidorutansvensklicens.se/">odds sidor utan svensk licens</a></small></div></iframe> 
-
-Boxein és un mitjà que vol ser transversal entre la teoria i la pràctica de la comunicació i l’anàlisi de la realitat social, política i econòmica de Catalunya i el món global que l’envolta. 
+**Boxein és un mitjà que vol ser transversal entre la teoria i la pràctica de la comunicació i l’anàlisi de la realitat social, política i econòmica de Catalunya i el món global que l’envolta.**
 
 Boxein ha nascut amb l’objectiu de fer més accessible la necessitat humana d’entendre i explicar els fenòmens socials que tenen lloc a la societat. També es vol oferir contingut rellevant per a la millora contínua de les polítiques públiques i la seva comunicació entenedora i simplificada per a un públic variat.
 
 Per això, aquest projecte es fonamenta amb la generació de processos i tècniques computacionals d’obtenció, transformació i anàlisi de dades estandarditzats i reproduïbles mitjançant el llenguatge de programació R. 
 
-En aquest projecte hi trobareu mapes, informes, resums de llibres i Policy Briefs que tractaran diverses polítiques públiques elementals pel benestar de la societat catalana. 
+En aquest projecte hi trobareu **recursos per a la investigació**, així com també mapes, informes, resums de llibres i Policy Briefs que tractaran diverses polítiques públiques elementals pel benestar de la societat catalana. 
 
 ```{r panelset, echo=FALSE}
 library(xaringanExtra)

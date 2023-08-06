@@ -20,10 +20,12 @@ navbar:
       menu: 
         - text: "Articles i entrevistes"
           href: articlesientrevistes.html
-        - text: "Fonaments de recerca"
-          href: fonamentsderecerca.html
         - text: "Policy briefs"
           href: policybriefs.html
+    - text: "Re-cursos"
+      menu:
+        - text: "Fonaments de recerca"
+          href: fonamentsderecerca.html
     - text: "Blog"
       href: blog.html
 #    - icon: fa fa-spotify
