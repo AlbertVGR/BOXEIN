@@ -1,5 +1,5 @@
 ---
-title: "Què és Boxein?"
+title: "Boxein"
 #description: |
 site: distill::distill_website
 ---
@@ -21,13 +21,17 @@ knitr::opts_chunk$set(echo = FALSE)
 # https://youtubeembedcode.com/es/
 ```
 
+## Presentació
+
 <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="788.54" height="443" type="text/html" src="https://www.youtube.com/embed/5IcUv7IORcg?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"><div><small><a href="https://youtubeembedcode.com/de/">youtubeembedcode de</a></small></div><div><small><a href="https://oddssidorutansvensklicens.se/">odds sidor utan svensk licens</a></small></div></iframe> 
 
-Boxein és un mitjà de comunicació que empra tècniques computacionals per divulgar coneixement sobre les ciències socials a Catalunya. Amb les eines disponibles al segle XXI, aquest mitjà de comunicació vol ser transversal entre la teoria i la pràctica i així, revolucionar la manera de difondre informació sobre la realitat política, social i econòmica a Catalunya. Per portar a terme aquesta vocació, l'entitat generarà les seves pròpies dades amb tècniques documentables i farà servir qualsevol font de dades obertes disponible o facilitada per terceres persones o institucions.
+Boxein és un mitjà que vol ser transversal entre la teoria i la pràctica de la comunicació i l’anàlisi de la realitat social, política i econòmica de Catalunya i el món global que l’envolta. 
 
-La naturalesa de les publicacions en aquest mitjà es correspon en voler entendre i explicar els fenòmens socials que tenen lloc a la realitat social. A través d'aquest procés es vol oferir el desenvolupament d'eines o aplicacions per millorar la vida dels habitants d'aquesta regió del planeta terra.
+Boxein ha nascut amb l’objectiu de fer més accessible la necessitat humana d’entendre i explicar els fenòmens socials que tenen lloc a la societat. També es vol oferir contingut rellevant per a la millora contínua de les polítiques públiques i la seva comunicació entenedora i simplificada per a un públic variat.
 
-L'ànima de BOXEIN és fonamentalment cooperativa i els seus projectes són reproduïbles per a qualsevol persona amb accés a un ordinador personal i internet.
+Per això, aquest projecte es fonamenta amb la generació de processos i tècniques computacionals d’obtenció, transformació i anàlisi de dades estandarditzats i reproduïbles mitjançant el llenguatge de programació R. 
+
+En aquest projecte hi trobareu mapes, informes, resums de llibres i Policy Briefs que tractaran diverses polítiques públiques elementals pel benestar de la societat catalana. 
 
 ```{r panelset, echo=FALSE}
 library(xaringanExtra)
@@ -64,7 +68,7 @@ style_panelset_tabs(active_foreground = "#003049", hover_foreground = "#003049")
 
 ## Objectius
 
-- Augmentar l'interès pel coneixement científic social de la població de Catalunya a travès de la divulgació i el codi obert.  
+- Augmentar l'interès pel coneixement científic social de la població de Catalunya a travès de la divulgació.  
 - Obrir la generació i interpretació del coneixement científic social als habitants de Catalunya. 
 - Construir un ecosistema d'anàlisi de dades fonamentat amb el llenguatge de programació en R per garantir la reproducció i comprensió de les anàlisis efectuades per part de qualsevol persona. 
 - Emprar la informació obtinguda per avaluar i proposar polítiques públiques. 
@@ -75,12 +79,12 @@ style_panelset_tabs(active_foreground = "#003049", hover_foreground = "#003049")
 
 ## Què oferim?
 
-- Estudis a mida.
-- Consultoria d'estratègia i operacions. 
+- Anàlisi de dades per la gestió pública. 
 - Disseny de polítiques públiques. 
 - Avaluació de polítiques públiques. 
 - Desenvolupament d'aplicacions d'anàlisis política i socioeconòmica.
 - Informes d'anàlisi exploratòria de dades.
+- Estudis a mida.
 
 :::
 
@@ -100,68 +104,10 @@ L'abast dels nostres projectes poden arribar als següents àmbits administratiu
 
 :::
 
-::: {.panel}
-
-## Funcionament
-
-- Propostes de projectes per part de Boxein.
-  - Retransmissió de les fases del projecte a Discord (afegir enllaç).
-
-- Proposa un projecte!
-  - Ets un patró de Boxein amb més de tres mesos d'antiguitat? Aleshores tens el dret de suggerir-nos un projecte i participar-ne. Nosaltres et direm si el projecte que recomanes és factible i el podem fer o li cal un altre enfocament.
-
-### Tots els projectes seran publicats en aquest web i el codi serà de lliure accés mitjançant Github. Aquesta condició no es complirà per a tots aquells projectes que siguin encàrrecs privats i que ho sol·licitin.
-
-:::
-
 :::::
 
-## Projectes en ejecució
-
-```{r}
-library(DT)
-datatable(head(mtcars, n = nrow(mtcars)), options = list(pageLength = 5))
-```
 
 
-
-
-
-
-:::: {style="display: flex;"}
-
-::: {}
-
-Pots treure els headers | 
-------------- | 
-<center>
-![The patio Chris and I built summer 2020.](images/European_Parliament_-_Hemicycle.jpg){width=50%} 
-</center>| 
-
-Pots treure els headers | 
-------------- | 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. | 
-
-
-:::
-
-::: {}
-
-
-Pots treure els headers | 
-------------- |
-<center>
-![The patio Chris and I built summer 2020.](images/European_Parliament_-_Hemicycle.jpg){width=50%}
-</center>| 
-
-
-Pots treure els headers | 
-------------- | 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. | 
-
-:::
-
-::::
 
 
 

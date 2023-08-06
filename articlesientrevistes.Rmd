@@ -1,6 +1,6 @@
 ---
-title: "Entrevistes"
-listing: entrevistes
+title: "Articles i entrevistes"
+listing: articlesientrevistes
 output: distill::distill_article
 ---
 
@@ -9,7 +9,4 @@ h1 {
   text-align: center;
 }
 ```
-
-
-
 

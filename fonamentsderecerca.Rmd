@@ -1,6 +1,6 @@
 ---
-title: "Articles"
-listing: articles
+title: "Fonaments de recerca"
+listing: fonamentsderecerca
 output: distill::distill_article
 ---
 

@@ -14,18 +14,19 @@ navbar:
   right:
 #    - text: "Presentació"
 #      href: index.html
+#    - text: "Botiga"
+#      href: posar h ref de la web de la botiga
     - text: Publicacions
       menu: 
-        - text: "Articles"
-          href: articles.html
+        - text: "Articles i entrevistes"
+          href: articlesientrevistes.html
+        - text: "Fonaments de recerca"
+          href: fonamentsderecerca.html
         - text: "Policy briefs"
           href: policybriefs.html
-        - text: "Entrevistes"
-          href: entrevistes.html
     - text: "Blog"
       href: blog.html
-    - text: "Aplicacions"
-      href: aplicacions.html
+#    - icon: fa fa-spotify
     - icon: fa fa-twitter
       href: https://twitter.com/Boxein_365
     - icon: fa fa-github
